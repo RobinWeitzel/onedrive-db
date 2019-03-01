@@ -51,8 +51,9 @@
 	});
 })(hello);
 
-class ExcelDB {
-    constructor(appName) {
+class OnedriveDB {
+    constructor(appID, appName) {
+        this.appID = appID;
         this.appName = appName;
         this.initalized = false;
     }
@@ -61,7 +62,7 @@ class ExcelDB {
         return new Promise((resolve, reject) => {
             // Set up access to onedrive
             hello.init({
-                aad: `2f9fb017-1984-4ca7-8758-f4529c8b8331`
+                aad: this.appID
             }, {
                 redirect_uri: '../redirect.html',
                 scope: 'User.Read, Files.ReadWrite.AppFolder'
@@ -299,13 +300,4 @@ class ExcelDB {
         });
     }
 }
-
-const db = new ExcelDB("Test2");
-
-async function load() {
-    await db.init();
-    console.log("Data: " + JSON.stringify(db.data));
-}
-
-load();
 

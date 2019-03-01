@@ -10,5 +10,15 @@
     
     <script src="./bower_components/hello/dist/hello.all.js" class="pre"></script>
     <script src="onedrive-db.js" class="pre"></script>
+    <script>
+        const db = new OnedriveDB(`2f9fb017-1984-4ca7-8758-f4529c8b8331`, "Test");
+
+        async function load() {
+            await db.init();
+            console.log("Data: " + JSON.stringify(db.data));
+        }
+
+        load();
+    </script>
 </body>
 </html>
