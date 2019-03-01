@@ -9,7 +9,7 @@ These files can be read and written to to store any kind of data (as long as it 
 
 ## Getting started
 Requirements:
-* Make sure to include [hello.js](https://adodson.com/hello.js/) and this library (in this order)
+* Make sure to include [hello.js](https://adodson.com/hello.js/) and this library (in this order) + the redirect.html
 * Create an app in the [Azure portal](https://portal.azure.com)
 * Give this app "User.Read" and "Files.ReadWrite.AppFolder" permissions
 * Set the redirect-url to the desired url
