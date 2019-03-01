@@ -25,6 +25,11 @@ db.init().then(data => {});
 ```
 Now, you can get the data at any time by using db.data.
 
+You can reload the data like this:
+```
+db.load().then(data => {});
+```
+
 Once you made changes to the data, save the result:
 ```
 db.save();
